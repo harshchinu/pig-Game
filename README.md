@@ -18,5 +18,5 @@ Example 2: Craig rolls a 6 and decides to continue. He then chooses to roll four
 
 
 
-So the game is build on Javascript 
+So the game is build on Javascript go to index.html to play the game and to know the code that in app.js and please refer to styles.css to see how styles getting toggles using Javascript you don't get confused
 
