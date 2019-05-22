@@ -42,8 +42,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
         nextPlayer();
     } 
  }
-    
-);
+    });
 
 
 document.querySelector('.btn-hold').addEventListener('click',function(){
