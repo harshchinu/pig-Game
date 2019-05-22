@@ -33,14 +33,14 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     
     //game logic 
     
-   if(dice1 !== 1 && dice2 !== 1){
-    roundScore += dice1 + dice2;
-    document.querySelector('#current-'+ activePlayer).textContent = roundScore;
-    }
-    
-    }else{
-        nextPlayer();
-    } 
+ if (dice1 !== 1 && dice2 !== 1) {
+            //Add score
+            roundScore += dice1 + dice2;
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+            //Next player
+            nextPlayer();
+        }
  }
     });
 
