@@ -11,14 +11,16 @@ GAME RULES:
 var scores, roundScore,activePlayer,gamePlaying,enteredValue;
 init();
 
-var prevdice;
+var lastDice;
 
 document.querySelector('.btn-roll').addEventListener('click',function(){ 
     if(gamePlaying){
     
     //random number generate for dice
-    var dice1 = Math.floor(Math.random() * 6) + 1;
-    var dice2 = Math.floor(Math.random() * 6) + 1;
+        var dice1 = Math.floor(Math.random() * 6) + 1;
+        var dice2 = Math.floor(Math.random() * 6) + 1;
+    
+        
     //dice image change
     var dicedom1 = document.querySelector('.dice');
     var dicedom2 = document.querySelector('.dice1');
@@ -33,7 +35,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     
     //game logic 
     
- if (dice1 !== 1 && dice2 !== 1) {
+   if (dice1 !== 1 && dice2 !== 1) {
             //Add score
             roundScore += dice1 + dice2;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
@@ -42,11 +44,13 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
             nextPlayer();
         }
  }
-    });
+    
+});
 
 
 document.querySelector('.btn-hold').addEventListener('click',function(){
     if (gamePlaying){
+        
     scores[activePlayer] += roundScore;
     
     document.querySelector('#score-'+activePlayer).textContent=scores[activePlayer];
